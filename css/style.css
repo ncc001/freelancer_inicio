@@ -7,18 +7,35 @@
 
 	--fuente-principal: 3.8rem;
 }
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
 
 html {
 	font-size: 62.5%;
+	box-sizing: border-box;
 }
 body {
 	font-size: 16px; /*1rem = 10px*/
 	font-family: "Krub", sans-serif;
 }
-.titulo {
+
+h1 {
+	font-size: 3.8rem;
+}
+h2 {
+	font-size: 2.8rem;
+}
+h3 {
+	font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3 {
 	text-align: center;
-	font-size: var(--fuente-principal);
-	color: var(--primario);
 }
 
 .titulo span {
@@ -28,6 +45,30 @@ body {
 .contenedor {
 	max-width: 120rem;
 	margin: 0 auto;
+}
+
+.boton {
+	background: var(--secundario);
+	color: var(--blanco);
+	padding: 1rem 3rem;
+	margin-top: 3rem;
+	font-size: 2rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-radius: 0.5rem;
+	-webkit-border-radius: 0.5rem;
+	-moz-border-radius: 0.5rem;
+	-ms-border-radius: 0.5rem;
+	-o-border-radius: 0.5rem;
+	width: 90%;
+	text-align: center;
+}
+
+@media (min-width: 480px) {
+	.boton {
+		width: auto;
+	}
 }
 
 .nav-bg {
@@ -56,4 +97,34 @@ body {
 .navegacion-principal a:hover {
 	background-color: var(--primario);
 	color: var(--oscuro);
+}
+
+.hero {
+	background-image: url(../img/hero.jpg);
+	background-repeat: no-repeat;
+	border-style: cover;
+	height: 45rem;
+
+	position: relative;
+}
+
+.contenido-hero {
+	position: absolute;
+	background-color: rgba(0 0 0 / 70%);
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.contenido-hero h2,
+.contenido-hero p {
+	color: var(--blanco);
+}
+
+.ubicacion {
+	display: flex;
+	align-items: flex-end;
 }
