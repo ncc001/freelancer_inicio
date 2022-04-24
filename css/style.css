@@ -16,6 +16,7 @@
 html {
 	font-size: 62.5%;
 	box-sizing: border-box;
+	scroll-snap-type: y mandatory;
 }
 body {
 	font-size: 1.6rem; /*1rem = 10px*/
