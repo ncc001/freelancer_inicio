@@ -18,6 +18,14 @@ html {
 	box-sizing: border-box;
 	scroll-snap-type: y mandatory;
 }
+
+/* scroll-snap */
+.sombra,
+.titulo,
+.formulario {
+	scroll-snap-align: start;
+	scroll-snap-stop: always;
+}
 body {
 	font-size: 1.6rem; /*1rem = 10px*/
 	font-family: "Krub", sans-serif;
